@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/markdown-previewer/static/js/main.6b52706b.js",
+    "index.html": "/markdown-previewer/index.html",
+    "main.6b52706b.js.map": "/markdown-previewer/static/js/main.6b52706b.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.6b52706b.js"
+  ]
+}
