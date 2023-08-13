@@ -1,9 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {marked} from "marked";
+import { marked } from "marked";
 import Prism from "prismjs";
-
-
 
 marked.setOptions({
   breaks: true,
@@ -17,17 +15,23 @@ renderer.link = function (href, title, text) {
   return `<a target="_blank" href=${href}>${text}</a>`;
 };
 
-const Editor = ({ content, handleTextareaInput, id }) => (
-  <textarea id={id} value={content} onChange={handleTextareaInput} />
+const Editor = ({ content, handleTextareaInput }) => (
+  <div className="editor-container">
+    <h1>Editor</h1>
+    <textarea id="editor" value={content} onChange={handleTextareaInput} />
+  </div>
 );
 
 const Previewer = ({ content }) => (
-  <div
-    id="preview"
-    dangerouslySetInnerHTML={{
-      __html: marked(content, { renderer: renderer }),
-    }}
-  />
+  <div className="previewer-container">
+    <h1>Preview</h1>
+    <div
+      id="preview"
+      dangerouslySetInnerHTML={{
+        __html: marked(content, { renderer: renderer }),
+      }}
+    />
+  </div>
 );
 
 const App = () => {
@@ -74,7 +78,7 @@ const App = () => {
   1. And last but not least, let's not forget embedded images:
   
   ![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)
-  `
+  `;
   const [content, setContent] = React.useState(initialState);
 
   const handleTextareaInput = (event) => {
@@ -82,7 +86,11 @@ const App = () => {
   };
   return (
     <div className="App">
-      <Editor id={'editor'} content={content} handleTextareaInput={handleTextareaInput} />
+      <Editor
+        
+        content={content}
+        handleTextareaInput={handleTextareaInput}
+      />
       <Previewer content={content} />
     </div>
   );
