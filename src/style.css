@@ -1,3 +1,7 @@
+body {
+  background-color: #87b5b5;
+  font-weight: 300;
+}
 .App {
   display: flex;
   justify-content: space-between;
@@ -7,43 +11,74 @@
 .editor-container,
 .previewer-container {
   padding: 20px;
-  border: 1px solid #ccc;
   box-sizing: border-box;
 }
 
 .editor-container {
-  background-color: #f5f5f5;
   width: 40%;
 }
 .editor-container > h1 {
-  background-color: aqua;
-  margin-bottom: 10px;
+  background-color: #4aa3a3;
+  margin-bottom: 0px;
   text-align: center;
+  width: 99%;
+  box-shadow: 1px 1px 10px 2px #3a5f5f;
+  border: 1px solid black;
+}
+
+.editor-container textarea {
+  width: 99%;
+  height: 92%;
+  border: none;
+  resize: none;
+  background-color: #c0d9d8;
+  overflow: auto;
+  padding-right: 0;
+  padding-left: 1px;
+  box-shadow: 1px 1px 10px 2px #3a5f5f;
+  border: 1px solid black;
+}
+.token.keyword {
+  color: #07a; /* Keywords */
+}
+.token.comment {
+  color: #708090; /* Comments and other meta information */
+}
+.token.function {
+  color: #dd4a68;
+}
+.token.namespace {
+  opacity: 0.7; /* Namespaces */
+}
+.token.string {
+  color: #690; /* Strings and attribute values */
+}
+.token.punctuation {
+  color: #999; /* Punctuation and operators */
+}
+
+.token.operator {
+  color: #9a6e3a;
 }
 
 .previewer-container {
-  background-color: #fff;
+  background-color: #87b5b5;
   width: 60%;
 }
 
 .previewer-container > h1 {
-  background-color: aqua;
-  margin-bottom: 10px;
+  background-color: #4aa3a3;
+  margin-bottom: 0px;
   text-align: center;
+  border: 1px solid black;
+  box-shadow: 1px 1px 10px 2px #3a5f5f;
 }
 
-textarea {
-  width: 100%;
-  height: 100%;
-  border: none;
-  resize: none;
-}
 #preview {
-  border: none;
   padding: 10px;
-  overflow: auto;
-  border: 1px solid #ccc;
-  background-color: aqua;
+  background-color: #c0d9d8;
+  border: 1px solid black;
+  box-shadow: 1px 1px 10px 2px #3a5f5f;
 }
 
 #preview h1 {
@@ -69,6 +104,8 @@ textarea {
 
 #preview code {
   background: white;
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
 #preview blockquote {
@@ -81,7 +118,7 @@ textarea {
 }
 #preview td,
 #preview th {
-  border: 2px solid black;
+  border: 2px solid #224b4b;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -91,3 +128,35 @@ textarea {
   max-width: 90%;
   margin: 2rem auto;
 }
+
+
+/* Add these media queries to your CSS */
+
+/* For tablets */
+@media screen and (max-width: 700px) {
+  .App {
+    flex-direction: column; /* Stack the components vertically */
+  }
+
+  .editor-container,
+  .previewer-container {
+    width: 100%; /* Take up full width on tablets */
+  }
+
+  .editor-container textarea{
+    min-height: 600px;
+  }
+}
+
+/* For mobile phones */
+@media screen and (max-width: 480px) {
+  .editor-container,
+  .previewer-container {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .editor-container textarea{
+    min-height: 300px;
+  }
+}
+
