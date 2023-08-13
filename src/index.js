@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { marked } from "marked";
 import Prism from "prismjs";
+import "./style.css";
 
 marked.setOptions({
   breaks: true,
@@ -86,11 +87,7 @@ const App = () => {
   };
   return (
     <div className="App">
-      <Editor
-        
-        content={content}
-        handleTextareaInput={handleTextareaInput}
-      />
+      <Editor content={content} handleTextareaInput={handleTextareaInput} />
       <Previewer content={content} />
     </div>
   );
