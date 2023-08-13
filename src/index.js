@@ -18,11 +18,8 @@ renderer.link = function (href, title, text) {
 
 const Editor = ({ content, handleTextareaInput }) => (
   <div className="editor-container">
-    
-
     <h1>Editor</h1>
     <textarea id="editor" value={content} onChange={handleTextareaInput} />
-    
   </div>
 );
 

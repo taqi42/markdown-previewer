@@ -129,9 +129,6 @@ body {
   margin: 2rem auto;
 }
 
-
-/* Add these media queries to your CSS */
-
 /* For tablets */
 @media screen and (max-width: 700px) {
   .App {
@@ -143,7 +140,7 @@ body {
     width: 100%; /* Take up full width on tablets */
   }
 
-  .editor-container textarea{
+  .editor-container textarea {
     min-height: 600px;
   }
 }
@@ -155,8 +152,7 @@ body {
     padding: 10px; /* Reduce padding for smaller screens */
   }
 
-  .editor-container textarea{
+  .editor-container textarea {
     min-height: 300px;
   }
 }
-
