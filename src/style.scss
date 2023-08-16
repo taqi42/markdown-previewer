@@ -73,63 +73,61 @@ body {
     border: 1px solid black;
     box-shadow: 1px 1px 10px 2px #3a5f5f;
   }
-}
 
-#preview {
-  padding: 10px;
-  background-color: #c0d9d8;
-  border: 1px solid black;
-  box-shadow: 1px 1px 10px 2px #3a5f5f;
-  h1 {
-    border-bottom: 2px solid black;
-  }
-  h2 {
-    border-bottom: 1px solid black;
-  }
-  pre {
-    display: block;
-    overflow: auto;
-    background: white;
-    padding: 5px;
-    line-height: 1.2;
-  }
-  p {
-    code {
+  #preview {
+    padding: 10px;
+    background-color: #c0d9d8;
+    border: 1px solid black;
+    box-shadow: 1px 1px 10px 2px #3a5f5f;
+    h1 {
+      border-bottom: 2px solid black;
+    }
+    h2 {
+      border-bottom: 1px solid black;
+    }
+    pre {
+      display: block;
+      overflow: auto;
+      background: white;
       padding: 5px;
+      line-height: 1.2;
+    }
+    p {
+      code {
+        padding: 5px;
+        font-weight: bold;
+        line-height: 1.5;
+      }
+    }
+
+    code {
+      background: white;
       font-weight: bold;
-      line-height: 1.5;
+      font-size: 0.9rem;
+    }
+
+    blockquote {
+      border-left: 3px solid black;
+      padding-left: 5px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td,
+    th {
+      border: 2px solid #224b4b;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    img {
+      display: block;
+      max-width: 90%;
+      margin: 2rem auto;
     }
   }
-
-  code {
-    background: white;
-    font-weight: bold;
-    font-size: 0.9rem;
-  }
-
-  blockquote {
-    border-left: 3px solid black;
-    padding-left: 5px;
-  }
-
-  table {
-    border-collapse: collapse;
-  }
-
-  td,
-  th {
-    border: 2px solid #224b4b;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  img {
-    display: block;
-    max-width: 90%;
-    margin: 2rem auto;
-  }
 }
-
-
 
 /* For tablets */
 @media screen and (max-width: 700px) {
