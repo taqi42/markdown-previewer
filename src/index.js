@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { marked } from "marked";
 import Prism from "prismjs";
-import "./style.css";
+import "./style.scss";
 
 marked.setOptions({
   breaks: true,
